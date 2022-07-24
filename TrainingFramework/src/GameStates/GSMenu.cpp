@@ -30,7 +30,7 @@ void GSMenu::Init()
 	button->Set2DPosition(Globals::screenWidth -168 , Globals::screenHeight / 2 );
 	button->SetSize(250, 100);
 	button->SetOnClick([this]() {
-			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PrepareToPlay);
+			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CHOOSEGAME);
 			ResourceManagers::GetInstance()->StopSound(name);
 		});
 	m_listButton.push_back(button);

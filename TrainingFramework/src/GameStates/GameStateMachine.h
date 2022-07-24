@@ -10,11 +10,17 @@ enum class StateType
 	STATE_INVALID = 0,
 	STATE_INTRO,
 	STATE_MENU,
-	STATE_PrepareToPlay,
-	STATE_PLAY,
+	STATE_HELP, 
+	STATE_CHOOSEGAME,
+	STATE_PrepareToPlay,	
+	STATE_PLAY,	
 	STATE_DIE, 
 	STATE_WIN,
-	STATE_HELP,
+	STATE_HELPGAME2,
+	STATE_PLAY1,
+	STATE_TEAMAWIN,
+	STATE_TEAMBWIN,
+	STATE_TEAMAVTEAMB,
 };
 
 class GameStateMachine : public CSingleton<GameStateMachine>
@@ -34,7 +40,6 @@ public:
 	bool	isRunning() { return m_running; }
 	void	Quit() { m_running = false; }
 	void	PerformStateChange();
-	void	PerformStateChange1();
 
 	inline std::shared_ptr<GameStateBase> CurrentState()const
 	{

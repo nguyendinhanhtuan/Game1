@@ -26,7 +26,7 @@ void AiPlay2::Dead(int die)
 	if (die == 1)
 	{
 		isDie = true;
-		std::printf("AiPlayDie");
+		//std::printf("AiPlayDie");
 
 	}
 }

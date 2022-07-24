@@ -58,6 +58,8 @@ void GSIntro::Update(float deltaTime)
 	m_time += deltaTime;
 	if (m_time > 3.5)
 	{
+		//GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);
+		//GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY1);
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);
 		m_time = 0;
 	}

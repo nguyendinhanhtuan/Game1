@@ -6,9 +6,11 @@ class ActorACC
 
 {
 public:
+	std::string name = "M4-shoot.wav";
 	GLfloat posX = 0.0f;
 	GLfloat posY = 0.0f;
 	int state;
+	int count = 0;
 	float timer;
 	//decletion
 	ActorACC(float x, float y);

@@ -1,150 +1,7 @@
-﻿  Application.cpp
-D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2014): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,int,int,int&,int,int&,float,float,float>(_Ty &,int &&,int &&,int &,int &&,int &,float &&,float &&,float &&) noexcept(false)' being compiled
-          with
-          [
-              _Ty=Camera
-          ]
-D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
-          with
-          [
-              _Ty=Camera
-          ]
-D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
-          with
-          [
-              _Ty=Camera
-          ]
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\Application.cpp(20): message : see reference to function template instantiation 'std::shared_ptr<Camera> std::make_shared<Camera,int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
-D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: 'argument': conversion from '_Ty' to 'GLfloat', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-  ResourceManagers.cpp
-  ActorACC.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\ActorACC.cpp(13,38): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\ActorACC.cpp(13,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\ActorACC.cpp(44,34): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\ActorACC.cpp(61,38): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\ActorACC.cpp(61,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(15,36): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(15,30): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(39,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(44,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(58,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(69,36): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay.cpp(69,30): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay1.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(41,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(46,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(60,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(71,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay1.cpp(71,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay2.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(41,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(46,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(60,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(71,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay2.cpp(71,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay3.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(39,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(44,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(58,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(69,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay3.cpp(69,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay4.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(39,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(44,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(58,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(69,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay4.cpp(69,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay5.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(39,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(44,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(58,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(69,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay5.cpp(69,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay6.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(39,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(44,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(58,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(69,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay6.cpp(69,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  AiPlay7.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(15,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(15,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(39,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(44,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(58,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(69,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\AiPlay7.cpp(69,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  Backgound.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Backgound.cpp(13,39): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Backgound.cpp(13,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Backgound.cpp(36,34): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Backgound.cpp(47,34): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Backgound.cpp(67,39): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Backgound.cpp(67,33): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  Font.cpp
-  GameButton.cpp
-  Loanding.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Loanding.cpp(13,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Loanding.cpp(13,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Loanding.cpp(35,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Loanding.cpp(45,32): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Loanding.cpp(63,37): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Loanding.cpp(63,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  Slime.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Slime.cpp(15,35): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Slime.cpp(15,29): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Slime.cpp(43,30): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Slime.cpp(48,31): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Slime.cpp(90,35): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Slime.cpp(90,29): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
-  Sprite2D.cpp
-  Camera.cpp
-  Sprite3D.cpp
-  Model.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Model.cpp(25,18): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
-  Generating Code...
-  Compiling...
-  Shader.cpp
-  SpriteAnimation.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\SpriteAnimation.cpp(82,39): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\SpriteAnimation.cpp(87,39): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\SpriteAnimation.cpp(92,39): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\SpriteAnimation.cpp(97,39): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
-  Text.cpp
-  Texture.cpp
-  GameStateBase.cpp
-  GameStateMachine.cpp
-  GSDie.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSDie.cpp(66,74): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSDie.cpp(66,44): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-  GSHelp.cpp
-  GSIntro.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSIntro.cpp(20,86): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSIntro.cpp(20,52): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-  GSMenu.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(72,52): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-  GSPlay.cpp
+﻿  GSPlay.cpp
 D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47,92): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
 D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47,58): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(473,2): warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(546,2): warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given
 D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
@@ -165,7 +22,7 @@ D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Ty=Text
           ]
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(75): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[3],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[3],TextColor &&,double &&)' being compiled
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(88): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[3],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[3],TextColor &&,double &&)' being compiled
 D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
@@ -186,35 +43,5 @@ D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Ty=Slime
           ]
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(109): message : see reference to function template instantiation 'std::shared_ptr<Slime> std::make_shared<Slime,int,int>(int &&,int &&)' being compiled
-  GSPrepareToPlay.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPrepareToPlay.cpp(34,74): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPrepareToPlay.cpp(34,44): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-  GSWin.cpp
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSWin.cpp(66,74): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSWin.cpp(66,44): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSWin.cpp(74,78): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSWin.cpp(74,48): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSWin.cpp(81,79): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSWin.cpp(81,49): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-  TrainingFramework.cpp
-  Generating Code...
-Application.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
-soloud_static_d.lib(dr_impl.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(dr_impl.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_wav.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_wav.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(stb_vorbis.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(stb_vorbis.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_audiosource.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_audiosource.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_core_basicops.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_core_basicops.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_core_getters.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_core_getters.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_core_setters.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_core_setters.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_core_voicegroup.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_core_voicegroup.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_core_voiceops.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_core_voiceops.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_fader.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_fader.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_fft.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_fft.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_file.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_file.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_thread.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_thread.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_winmm.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_winmm.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
-soloud_static_d.lib(soloud_null.obj) : warning LNK4099: PDB 'soloud_static.pdb' was not found with 'soloud_static_d.lib(soloud_null.obj)' or at 'D:\GameLoft\MiniGameStarter\BIN-Nvidia\soloud_static.pdb'; linking object as if no debug info
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(122): message : see reference to function template instantiation 'std::shared_ptr<Slime> std::make_shared<Slime,int,int>(int &&,int &&)' being compiled
   TrainingFramework.vcxproj -> D:\GameLoft\MiniGameStarter\BIN-Nvidia\TrainingFramework.exe

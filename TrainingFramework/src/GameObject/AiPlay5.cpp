@@ -36,12 +36,12 @@ void AiPlay5::Move(int dir) {
 		if (isDie == false)
 		{
 			AiPlay5Sprite->SetCurrentAction(0);
-			AiPlay5Sprite->Set2DPosition(posX, 620);
+			AiPlay5Sprite->Set2DPosition(posX, 630);
 		}
 		else if (isDie == true)
 		{
 			AiPlay5Sprite->SetCurrentAction(2);
-			AiPlay5Sprite->Set2DPosition(posX, 470);
+			AiPlay5Sprite->Set2DPosition(posX, 480);
 		}
 		break;
 	case 1:
@@ -55,7 +55,7 @@ void AiPlay5::Move(int dir) {
 			AiPlay5Sprite->SetRotation(Vector3(0, PI, 0));
 			posX -= X_Val;
 			AiPlay5Sprite->SetCurrentAction(0);
-			AiPlay5Sprite->Set2DPosition(posX, 620);
+			AiPlay5Sprite->Set2DPosition(posX, 630);
 		}
 		break;
 	default:

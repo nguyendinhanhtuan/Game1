@@ -20,12 +20,14 @@ class AiPlay4;
 class AiPlay5; 
 class AiPlay6;
 class AiPlay7;
+class AiPlay8;
 class GSPlay :
 	public GameStateBase
 {
 public:
 	std::string name1 = "enemysound.wav";
 	std::string name = "SoundCountDown1.wav";
+	std::string name2 = "SoundBackgroundGame1.wav";
 	GSPlay();
 	~GSPlay();
 	bool	die = false;
@@ -36,9 +38,11 @@ public:
 	GLfloat timeAiPlayMove = 0.0f;
 	GLfloat timeAiPlayMove1 = 0.0f;
 	GLfloat timeAiPlayMove2 = 0.0f;
+	GLfloat timeAiPlayMove3 = 0.0f;
 	int		checkAiPlayMove ;
 	int		checkAiPlayMove1 ;
 	int		checkAiPlayMove2;
+	int		checkAiPlayMove3;
 	bool	aTime = true;
 	void	Init() override;
 	void	Exit() override;
@@ -46,6 +50,7 @@ public:
 	void	CheckDieAiPlay(int checkAiPlayMoveOption, GLfloat deltaTime);
 	void	CheckDieAiPlay1(int checkAiPlayMoveOption, GLfloat deltaTime);
 	void	CheckDieAiPlay2(int checkAiPlayMoveOption, GLfloat deltaTime);
+	void	CheckDieAiPlay3(int checkAiPlayMoveOption, GLfloat deltaTime);
 	void	Pause() override;
 	void	Resume() override;
 
@@ -60,6 +65,7 @@ public:
 	void	AiPlayMove(GLfloat deltaTime);
 	void	AiPlayMove1(GLfloat deltaTime);
 	void	AiPlayMove2(GLfloat deltaTime);
+	void	AiPlayMove3(GLfloat deltaTime);
 	int		m_KeyPress;
 
 private:
@@ -95,6 +101,7 @@ private:
 	//Button
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 	std::list<std::shared_ptr<GameButton>>	m_listButton1;
+	std::list<std::shared_ptr<GameButton>>	m_listButtonMenu;
 
 	// none
 	std::list<std::shared_ptr<Text>>	m_listTime;
@@ -124,5 +131,8 @@ private:
 		//7
 		std::shared_ptr<AiPlay7> pointerAiPlay7;
 		std::list<std::shared_ptr<AiPlay7>>	m_listAiPlay7Animation;
+		//8
+		std::shared_ptr<AiPlay8> pointerAiPlay8;
+		std::list<std::shared_ptr<AiPlay8>>	m_listAiPlay8Animation;
 };
 

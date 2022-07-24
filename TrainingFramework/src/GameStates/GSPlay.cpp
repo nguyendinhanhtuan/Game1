@@ -22,7 +22,7 @@
 #include "AiPlay5.h"
 #include "AiPlay6.h"
 #include "AiPlay7.h"
-
+#include "AiPlay8.h"
 
 
 
@@ -50,22 +50,35 @@ void GSPlay::Init()
 	// button close
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");
 	std::shared_ptr<GameButton>  button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth - 100, 50);
+	button->Set2DPosition(Globals::screenWidth -100, 150);
 	button->SetSize(150, 50);
 	button->SetOnClick([this]() {
-		GameStateMachine::GetInstance()->PopState();
-		ResourceManagers::GetInstance()->StopSound(name1);
-		ResourceManagers::GetInstance()->PlaySound(name);
+		exit(0);
 		});
 	m_listButton.push_back(button);
+
+	// button Menu
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
+	std::shared_ptr<GameButton>  buttonMenu = std::make_shared<GameButton>(model, shader, texture);
+	buttonMenu->Set2DPosition(Globals::screenWidth - 100, 100);
+	buttonMenu->SetSize(150, 50);
+	buttonMenu->SetOnClick([this]() {
+		GameStateMachine::GetInstance()->PushState(StateType::STATE_MENU);
+		ResourceManagers::GetInstance()->StopSound(name1);
+		ResourceManagers::GetInstance()->StopSound(name2);
+		});
+	m_listButtonMenu.push_back(buttonMenu);
 
 	// button reset
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_pause.tga");
 	std::shared_ptr<GameButton>  buttonPause = std::make_shared<GameButton>(model, shader, texture);
-	buttonPause->Set2DPosition(Globals::screenWidth - 400, 50);
-	buttonPause->SetSize(50, 50);
-	buttonPause->SetOnClick([]() {
+	buttonPause->Set2DPosition(Globals::screenWidth -100, 48);
+	buttonPause->SetSize(155, 55);
+	buttonPause->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->PushState(StateType::STATE_PrepareToPlay);
+		ResourceManagers::GetInstance()->StopSound(name1);
+		ResourceManagers::GetInstance()->PlaySound(name);
+		ResourceManagers::GetInstance()->StopSound(name2);
 		});
 	m_listButton1.push_back(buttonPause);
 
@@ -140,7 +153,7 @@ void GSPlay::Init()
 		pointerAiPlay2 = aiPlay2;
 		m_listAiPlay2Animation.push_back(aiPlay2);
 		//3
-		std::shared_ptr<AiPlay3> aiPlay3 = std::make_shared<AiPlay3>(1220, 260);
+		std::shared_ptr<AiPlay3> aiPlay3 = std::make_shared<AiPlay3>(1180, 260);
 		pointerAiPlay3 = aiPlay3;
 		m_listAiPlay3Animation.push_back(aiPlay3);
 		//4
@@ -148,17 +161,23 @@ void GSPlay::Init()
 		pointerAiPlay4 = aiPlay4;
 		m_listAiPlay4Animation.push_back(aiPlay4);
 		//5
-		std::shared_ptr<AiPlay5> aiPlay5 = std::make_shared<AiPlay5>(1220, 550);
+		std::shared_ptr<AiPlay5> aiPlay5 = std::make_shared<AiPlay5>(1150, 560);
 		pointerAiPlay5 = aiPlay5;
 		m_listAiPlay5Animation.push_back(aiPlay5);
 		//6
-		std::shared_ptr<AiPlay6> aiPlay6 = std::make_shared<AiPlay6>(1220, 600);
+		std::shared_ptr<AiPlay6> aiPlay6 = std::make_shared<AiPlay6>(1210, 600);
 		pointerAiPlay6 = aiPlay6;
 		m_listAiPlay6Animation.push_back(aiPlay6);
 		//7
-		std::shared_ptr<AiPlay7> aiPlay7 = std::make_shared<AiPlay7>(1220, 300);
+		std::shared_ptr<AiPlay7> aiPlay7 = std::make_shared<AiPlay7>(1170, 300);
 		pointerAiPlay7 = aiPlay7;
 		m_listAiPlay7Animation.push_back(aiPlay7);
+		//8
+		std::shared_ptr<AiPlay8> aiPlay8 = std::make_shared<AiPlay8>(1180, 540);
+		pointerAiPlay8 = aiPlay8;
+		m_listAiPlay8Animation.push_back(aiPlay8);
+
+		ResourceManagers::GetInstance()->PlaySound(name2);
 }
 
 void GSPlay::Exit()
@@ -188,14 +207,8 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 		case KEY_MOVE_LEFT:
 			m_KeyPress |= 1;
 			break;
-		case KEY_MOVE_BACKWORD:
-			m_KeyPress |= 1 << 1;
-			break;
 		case KEY_MOVE_RIGHT:
 			m_KeyPress |= 1 << 2;
-			break;
-		case KEY_MOVE_FORWORD:
-			m_KeyPress |= 1 << 3;
 			break;
 		default:
 			break;
@@ -208,14 +221,8 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 		case KEY_MOVE_LEFT:
 			m_KeyPress ^= 1;
 			break;
-		case KEY_MOVE_BACKWORD:
-			m_KeyPress ^= 1 << 1;
-			break;
 		case KEY_MOVE_RIGHT:
 			m_KeyPress ^= 1 << 2;
-			break;
-		case KEY_MOVE_FORWORD:
-			m_KeyPress ^= 1 << 3;
 			break;
 		default:
 			break;
@@ -236,6 +243,13 @@ void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
 	for (auto buttonPause : m_listButton1)
 	{
 		if (buttonPause->HandleTouchEvents(x, y, bIsPressed))
+		{
+			break;
+		}
+	}
+	for (auto buttonMenu : m_listButtonMenu)
+	{
+		if (buttonMenu->HandleTouchEvents(x, y, bIsPressed))
 		{
 			break;
 		}
@@ -272,6 +286,13 @@ void GSPlay::CountTime(GLfloat deltaTime)
 	if (countTime > 0) {
 		countTime -= deltaTime ;
 		m_time->SetText(std::to_string(int(countTime)));
+
+	}
+	if (countTime <= 0)
+	{
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIE);
+		ResourceManagers::GetInstance()->StopSound(name2);
+
 	}
 }
 
@@ -315,7 +336,6 @@ void GSPlay::CheckDieAiPlay(int checkAiPlayMoveOption, GLfloat deltaTime)
 		pointerAiPlay->Dead(1);
 		pointerAiPlay1->Dead(1);
 		pointerAiPlay4->Dead(1);
-		pointerAiPlay7->Dead(1);
 		if (timeMoveDie >= 0.2f)
 		{
 			checkAiPlayMove = 1;
@@ -366,6 +386,27 @@ void GSPlay::CheckDieAiPlay2(int checkAiPlayMoveOption, GLfloat deltaTime)
 		}
 		else {
 			checkAiPlayMove2 = 0;
+		}
+		break;
+
+	default:
+		break;
+	}
+}
+void GSPlay::CheckDieAiPlay3(int checkAiPlayMoveOption, GLfloat deltaTime)
+{
+	switch (checkAiPlayMoveOption)
+	{
+	case 1:
+		pointerAiPlay7->Dead(1);
+		pointerAiPlay8->Dead(1);
+		if (timeMoveDie >= 0.2f)
+		{
+			checkAiPlayMove3 = 1;
+			timeMoveDie -= deltaTime;
+		}
+		else {
+			checkAiPlayMove3 = 0;
 		}
 		break;
 
@@ -434,6 +475,37 @@ void GSPlay::AiPlayMove2(GLfloat deltaTime)
 
 }
 
+void GSPlay::AiPlayMove3(GLfloat deltaTime)
+{
+	timeAiPlayMove3 += deltaTime;
+
+	if (timeAiPlayMove3 <= 3.8f)
+	{
+		checkAiPlayMove3 = 1;
+	}
+	else if (timeAiPlayMove3 > 3.8f && timeAiPlayMove3 < 8.0f) {
+		checkAiPlayMove3 = 0;
+	}
+	else if (timeAiPlayMove3 > 8.0f && timeAiPlayMove3 < 11.5f)
+	{
+		checkAiPlayMove3 = 1;
+	}
+	else if (timeAiPlayMove2 >= 11.5f && timeAiPlayMove2 <15.0f)
+	{
+		checkAiPlayMove3 = 0;
+	}
+	else if(timeAiPlayMove2 >=15.0f && timeAiPlayMove3 <16.5f)
+	{
+		checkAiPlayMove3 = 1;
+	}
+	else if (timeAiPlayMove3 >= 16.5f)
+	{
+		checkAiPlayMove3 = 0;
+		timeAiPlayMove3 = 0.0f;
+	}
+
+}
+
 void GSPlay::Update(float deltaTime)
 {
 
@@ -467,6 +539,7 @@ void GSPlay::Update(float deltaTime)
 		CheckDieAiPlay(checkAiPlayMove, deltaTime);
 		CheckDieAiPlay1(checkAiPlayMove1, deltaTime); 
 		CheckDieAiPlay2(checkAiPlayMove2, deltaTime);
+		CheckDieAiPlay3(checkAiPlayMove3, deltaTime);
 		break;
 	default:
 		break;
@@ -478,21 +551,27 @@ void GSPlay::Update(float deltaTime)
 		it->UpdateSlimePos(deltaTime);
 	}
 
-	switch (m_KeyPress)//Handle Key event
+	if (m_KeyPress == 0)
 	{
-	case 0:
 		pointerSlime->Move(0);
-		break;
-	case 1:
-		pointerSlime->Move(1);
-		break;
-	case 4:
-		pointerSlime->Move(4);
-		break;
-	default:
-		break;
-	}
 
+	}
+	else if (m_KeyPress == 1)
+	{
+		pointerSlime->Move(1);
+	}
+	else if (m_KeyPress == 4)
+	{
+		pointerSlime->Move(4);
+	}
+	else if (m_KeyPress ^= 1)
+	{
+		pointerSlime->Move(1);
+	}
+	else if (m_KeyPress ^= 1 << 2)
+	{
+		pointerSlime->Move(4);
+	}
 	//AiPlay Move
 
 	for (auto it : m_listAiPlayAnimation)
@@ -534,6 +613,11 @@ void GSPlay::Update(float deltaTime)
 		{
 			it->UpdateAiPlay7Pos(deltaTime);
 		}
+		//8
+		for (auto it : m_listAiPlay8Animation)
+		{
+			it->UpdateAiPlay8Pos(deltaTime);
+		}
 	//Option 1 AiPlay Move
 	AiPlayMove(deltaTime);
 	switch (checkAiPlayMove)
@@ -542,13 +626,11 @@ void GSPlay::Update(float deltaTime)
 		pointerAiPlay->Move(0);
 		pointerAiPlay1->Move(0);
 		pointerAiPlay4->Move(0);
-		pointerAiPlay7->Move(0);
 		break;
 	case 1:
 		pointerAiPlay->Move(1);
 		pointerAiPlay1->Move(1);
 		pointerAiPlay4->Move(1);
-		pointerAiPlay7->Move(1);
 		break;
 	default:
 		break;
@@ -569,6 +651,7 @@ void GSPlay::Update(float deltaTime)
 	default:
 		break;
 	}
+	//Option 3 AiPlay Move
 	AiPlayMove2(deltaTime);
 	switch (checkAiPlayMove2)
 	{
@@ -579,6 +662,21 @@ void GSPlay::Update(float deltaTime)
 	case 1:
 		pointerAiPlay5->Move(1);
 		pointerAiPlay2->Move(1);
+		break;
+	default:
+		break;
+	}
+	//Option 4 AiPlay Move
+	AiPlayMove3(deltaTime);
+	switch (checkAiPlayMove3)
+	{
+	case 0:
+		pointerAiPlay7->Move(0);
+		pointerAiPlay8->Move(0);
+		break;
+	case 1:
+		pointerAiPlay7->Move(1);
+		pointerAiPlay8->Move(1);
 		break;
 	default:
 		break;
@@ -623,8 +721,17 @@ void GSPlay::Update(float deltaTime)
 		{
 			it->AiPlay7Update(deltaTime);
 		}
+		//8
+		for (auto it : m_listAiPlay8Animation)
+		{
+			it->AiPlay8Update(deltaTime);
+		}
 	/////////////////////////////////////////////////////////
 	for (auto it : m_listButton)
+	{
+		it->Update(deltaTime);
+	}
+	for (auto it : m_listButtonMenu)
 	{
 		it->Update(deltaTime);
 	}
@@ -667,9 +774,9 @@ void GSPlay::Draw()
 	{
 		it->Draw();
 	}
-	for (auto& it : m_listSlimeAnimation)
+	for (auto& it : m_listButtonMenu)
 	{
-		it->SlimeDraw();
+		it->Draw();
 	}
 
 	for (auto& it : m_listActorACCAnimation)
@@ -680,7 +787,14 @@ void GSPlay::Draw()
 	{
 		it->LoadingDraw();
 	}
-	// AiPlayDraw
+
+
+	
+		for (auto& it : m_listSlimeAnimation)
+		{
+		it->SlimeDraw();
+		}
+		// AiPlayDraw
 	for (auto& it : m_listAiPlayAnimation)
 	{
 		it->AiPlayDraw();
@@ -720,4 +834,11 @@ void GSPlay::Draw()
 		{
 			it->AiPlay7Draw();
 		}
+		//8
+		for (auto& it : m_listAiPlay8Animation)
+		{
+			it->AiPlay8Draw();
+		}
+
+		
 }

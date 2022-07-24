@@ -47,6 +47,7 @@ void Slime::Move(int dir) {
 			SlimeSprite->SetCurrentAction(2);
 			SlimeSprite->Set2DPosition(posX, 280);
 			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIE);
+			ResourceManagers::GetInstance()->StopSound(name2);
 		}
 		break;
 	case 1:
@@ -54,11 +55,12 @@ void Slime::Move(int dir) {
 		SlimeSprite->SetCurrentAction(1);
 		XX_Val = -0.8f;
 		posX += XX_Val;
-		if (posX < 200 && posX + 10 > 1280)
+		if (posX < 200 || posX + 10 > 1280)
 		{
 			posX -= XX_Val;
 			dir = 0;
 			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_WIN);
+			ResourceManagers::GetInstance()->StopSound(name2);
 		}
 		if (isFaceRight) {
 			isFaceRight = false;
@@ -70,7 +72,7 @@ void Slime::Move(int dir) {
 		SlimeSprite->SetCurrentAction(1);
 		XX_Val = 0.8f;
 		posX += XX_Val;
-		if (posX < 200 && posX + 10 > 1280)
+		if (posX < 200 || posX + 10 > 1280)
 		{ 
 			posX -= XX_Val;
 		}

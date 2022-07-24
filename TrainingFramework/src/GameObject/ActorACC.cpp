@@ -31,15 +31,22 @@ void ActorACC::Move(int dir)
 			//std::printf("dung yen");
 			timer = 1.0f;
 			ActorACCSprite->SetCurrentAction(0);
+			ResourceManagers::GetInstance()->StopSound(name);
 		}
 			state = 0;
 			break;
 	case 1:
 		if (state != 1)
 		{
-			//std::printf("quay dau");
+			//std::printf("count = %d",count);
 			timer = 1.0f;
 			ActorACCSprite->SetCurrentAction(1);
+			count++;
+			if(count <=3 )
+			{
+			ResourceManagers::GetInstance()->PlaySound(name);
+			ResourceManagers::GetInstance()->PlaySound(name);
+			}
 		}
 			ActorACCSprite->Set2DPosition(posX, 330);
 			state = 1;

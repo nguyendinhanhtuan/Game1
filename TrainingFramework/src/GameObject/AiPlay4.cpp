@@ -47,7 +47,7 @@ void AiPlay4::Move(int dir) {
 	case 1:
 		//move left
 		AiPlay4Sprite->SetCurrentAction(1);
-		X_Val = -0.6f; //-0.5f; 
+		X_Val = -0.9f; //-0.5f; 
 		posX += X_Val;
 		if (posX < 100 || posX + 10 > 1280 && !isFaceRight)
 		{
