@@ -159,6 +159,27 @@
     <ClCompile Include="src\GameObject\AiPlay8.cpp">
       <Filter>TrainingFramework\src\GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameStates\GSPlay2.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\PlayGame3.cpp">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\Box.cpp">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameStates\Source.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameStates\DieGame3.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameStates\WinGame3.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameStates\GSHelpGame3.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h">
@@ -307,6 +328,24 @@
     </ClInclude>
     <ClInclude Include="src\GameObject\AiPlay8.h">
       <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameStates\GSPlay2.h">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\PlayGame3.h">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Box.h">
+      <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameStates\DieGame3.h">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameStates\WinGame3.h">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameStates\GSHelpGame3.h">
+      <Filter>TrainingFramework\src\GameStates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

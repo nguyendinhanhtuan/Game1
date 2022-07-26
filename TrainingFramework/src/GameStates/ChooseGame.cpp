@@ -33,8 +33,8 @@ void ChooseGame::Init()
 	//button Play again
 	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame.tga");
 	std::shared_ptr<GameButton> buttonPlayAgain = std::make_shared<GameButton>(model, shader, texture);
-	buttonPlayAgain->Set2DPosition(Globals::screenWidth - 955, 364);
-	buttonPlayAgain->SetSize(400, 260);
+	buttonPlayAgain->Set2DPosition(Globals::screenWidth - 1070, 367);
+	buttonPlayAgain->SetSize(340, 220);
 	buttonPlayAgain->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PrepareToPlay);
 		ResourceManagers::GetInstance()->PlaySound(Click);
@@ -42,11 +42,23 @@ void ChooseGame::Init()
 		});
 	m_listButtonPlayAgain.push_back(buttonPlayAgain);
 
-	//button exit
+	//button Play again1
+	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame2.tga");
+	std::shared_ptr<GameButton> buttonPlayAgain1 = std::make_shared<GameButton>(model, shader, texture);
+	buttonPlayAgain1->Set2DPosition(Globals::screenWidth - 203, 367);
+	buttonPlayAgain1->SetSize(340, 220);
+	buttonPlayAgain1->SetOnClick([this]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME3);
+		ResourceManagers::GetInstance()->PlaySound(Click);
+		ResourceManagers::GetInstance()->StopSound(name);
+		});
+	m_listButtonPlayAgain1.push_back(buttonPlayAgain1);
+
+	//button 
 	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame1.tga");
 	std::shared_ptr<GameButton> buttonExit = std::make_shared<GameButton>(model, shader, texture);
-	buttonExit->Set2DPosition(Globals::screenWidth - 320, 364);
-	buttonExit->SetSize(400, 260);
+	buttonExit->Set2DPosition(Globals::screenWidth - 637, 367);
+	buttonExit->SetSize(340, 220);
 	buttonExit->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME2);
 		ResourceManagers::GetInstance()->PlaySound(Click);
@@ -101,7 +113,18 @@ void ChooseGame::HandleTouchEvents(int x, int y, bool bIsPressed)
 		{
 			break;
 		}
+
 	}
+
+	for (auto buttonPlayAgain1 : m_listButtonPlayAgain1)
+	{
+		if (buttonPlayAgain1->HandleTouchEvents(x, y, bIsPressed))
+		{
+			break;
+		}
+
+	}
+
 	for (auto buttonMenu : m_listButtonMenu)
 	{
 		if (buttonMenu->HandleTouchEvents(x, y, bIsPressed))
@@ -129,6 +152,10 @@ void ChooseGame::Update(float deltaTime)
 	{
 		it->Update(deltaTime);
 	}
+	for (auto it : m_listButtonPlayAgain1)
+	{
+		it->Update(deltaTime);
+	}
 	for (auto it : m_listButtonMenu)
 	{
 		it->Update(deltaTime);
@@ -144,6 +171,10 @@ void ChooseGame::Draw()
 		it->Draw();
 	}
 	for (auto it : m_listButtonPlayAgain)
+	{
+		it->Draw();
+	}
+	for (auto it : m_listButtonPlayAgain1)
 	{
 		it->Draw();
 	}

@@ -9,6 +9,7 @@ enum class StateType
 {
 	STATE_INVALID = 0,
 	STATE_INTRO,
+	STATE_PLAY2,
 	STATE_MENU,
 	STATE_HELP, 
 	STATE_CHOOSEGAME,
@@ -17,10 +18,14 @@ enum class StateType
 	STATE_DIE, 
 	STATE_WIN,
 	STATE_HELPGAME2,
+	STATE_HELPGAME3,
 	STATE_PLAY1,
 	STATE_TEAMAWIN,
 	STATE_TEAMBWIN,
 	STATE_TEAMAVTEAMB,
+	STATE_DIEGAME3,
+	STATE_WINGAME3,
+
 };
 
 class GameStateMachine : public CSingleton<GameStateMachine>
