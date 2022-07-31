@@ -67,7 +67,7 @@ void GSPlay2::Init()
 	buttonPause->SetSize(150, 50);
 	buttonPause->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->PushState(StateType::STATE_HELPGAME3);
-		//ResourceManagers::GetInstance()->StopSound(name);
+		ResourceManagers::GetInstance()->StopSound(name);
 		});
 	m_listButton1.push_back(buttonPause);
 
@@ -325,7 +325,8 @@ void GSPlay2::Update(float deltaTime)
 	if (countTime <= 0.0f )
 	{
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIE);
-	
+		ResourceManagers::GetInstance()->StopSound(name);
+
 	}
 std ::  rand()%4 + 1 ;
 	/*
@@ -566,6 +567,8 @@ std ::  rand()%4 + 1 ;
 			if (timeMoveDie <= 0.0f  )
 			{
 			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIEGAME3);
+			ResourceManagers::GetInstance()->StopSound(name);
+
 			}
 		}
 
@@ -585,6 +588,8 @@ std ::  rand()%4 + 1 ;
 			if (timeMoveDie <= 0.0f)
 			{
 				GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIEGAME3);
+				ResourceManagers::GetInstance()->StopSound(name);
+
 			}
 		}
 	}
@@ -603,6 +608,8 @@ std ::  rand()%4 + 1 ;
 			if (timeMoveDie <= 0.0f)
 			{
 				GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIEGAME3);
+				ResourceManagers::GetInstance()->StopSound(name);
+
 			}
 		}
 	}
@@ -621,6 +628,8 @@ std ::  rand()%4 + 1 ;
 			if (timeMoveDie <= 0.0f)
 			{
 				GameStateMachine::GetInstance()->ChangeState(StateType::STATE_DIEGAME3);
+				ResourceManagers::GetInstance()->StopSound(name);
+
 			}
 		}
 	}

@@ -9,7 +9,7 @@ public:
 	GSHelpGame3();
 	~GSHelpGame3();
 	std::string name = "countdownGame2.wav";
-	std::string name1 = "SoundGame2.wav";
+	std::string name1 = "SoundBackGroundGame3.wav";
 	void	Init() override;
 	void	Exit() override;
 

@@ -16,6 +16,7 @@ public:
 	GLfloat m_DisapearTime;
 	std::string SoundGun = "M4-shoot.wav";
 	std::string name2 = "SoundBackgroundGame1.wav";
+	std::string name3 = "enemysound.wav";
 	int state;
 	float timer;
 	//stat

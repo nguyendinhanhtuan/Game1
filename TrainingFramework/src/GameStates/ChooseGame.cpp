@@ -26,15 +26,15 @@ void ChooseGame::Init()
 	buttonMenu->SetSize(150, 50);
 	buttonMenu->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);
-		//ResourceManagers::GetInstance()->StopSound(name);
+		ResourceManagers::GetInstance()->StopSound(name);
 		});
 	m_listButtonMenu.push_back(buttonMenu);
 
 	//button Play again
 	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame.tga");
 	std::shared_ptr<GameButton> buttonPlayAgain = std::make_shared<GameButton>(model, shader, texture);
-	buttonPlayAgain->Set2DPosition(Globals::screenWidth - 1070, 367);
-	buttonPlayAgain->SetSize(340, 220);
+	buttonPlayAgain->Set2DPosition(Globals::screenWidth - 1124, 360);
+	buttonPlayAgain->SetSize(270, 170);
 	buttonPlayAgain->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PrepareToPlay);
 		ResourceManagers::GetInstance()->PlaySound(Click);
@@ -45,8 +45,8 @@ void ChooseGame::Init()
 	//button Play again1
 	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame2.tga");
 	std::shared_ptr<GameButton> buttonPlayAgain1 = std::make_shared<GameButton>(model, shader, texture);
-	buttonPlayAgain1->Set2DPosition(Globals::screenWidth - 203, 367);
-	buttonPlayAgain1->SetSize(340, 220);
+	buttonPlayAgain1->Set2DPosition(Globals::screenWidth - 157, 360);
+	buttonPlayAgain1->SetSize(270, 170);
 	buttonPlayAgain1->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME3);
 		ResourceManagers::GetInstance()->PlaySound(Click);
@@ -54,17 +54,31 @@ void ChooseGame::Init()
 		});
 	m_listButtonPlayAgain1.push_back(buttonPlayAgain1);
 
+	//button Play again1
+	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame4.tga");
+	std::shared_ptr<GameButton> buttonPlayAgain11 = std::make_shared<GameButton>(model, shader, texture);
+	buttonPlayAgain11->Set2DPosition(Globals::screenWidth - 481, 360);
+	buttonPlayAgain11->SetSize(270, 170);
+	buttonPlayAgain11->SetOnClick([this]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME4);
+		ResourceManagers::GetInstance()->PlaySound(Click);
+		ResourceManagers::GetInstance()->StopSound(name);
+		});
+	m_listButtonPlayAgain2.push_back(buttonPlayAgain11);
+
 	//button 
 	texture = ResourceManagers::GetInstance()->GetTexture("btnPlayGame1.tga");
 	std::shared_ptr<GameButton> buttonExit = std::make_shared<GameButton>(model, shader, texture);
-	buttonExit->Set2DPosition(Globals::screenWidth - 637, 367);
-	buttonExit->SetSize(340, 220);
+	buttonExit->Set2DPosition(Globals::screenWidth - 805, 360);
+	buttonExit->SetSize(270, 170);
 	buttonExit->SetOnClick([this]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME2);
 		ResourceManagers::GetInstance()->PlaySound(Click);
 		ResourceManagers::GetInstance()->StopSound(name);
 		});
 	m_listButtonExit.push_back(buttonExit);
+
+
 	// background
 	texture = ResourceManagers::GetInstance()->GetTexture("bg_choosegame.tga");
 	shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -124,6 +138,14 @@ void ChooseGame::HandleTouchEvents(int x, int y, bool bIsPressed)
 		}
 
 	}
+	for (auto buttonPlayAgain11 : m_listButtonPlayAgain2)
+	{
+		if (buttonPlayAgain11->HandleTouchEvents(x, y, bIsPressed))
+		{
+			break;
+		}
+
+	}
 
 	for (auto buttonMenu : m_listButtonMenu)
 	{
@@ -156,6 +178,10 @@ void ChooseGame::Update(float deltaTime)
 	{
 		it->Update(deltaTime);
 	}
+	for (auto it : m_listButtonPlayAgain2)
+	{
+		it->Update(deltaTime);
+	}
 	for (auto it : m_listButtonMenu)
 	{
 		it->Update(deltaTime);
@@ -175,6 +201,10 @@ void ChooseGame::Draw()
 		it->Draw();
 	}
 	for (auto it : m_listButtonPlayAgain1)
+	{
+		it->Draw();
+	}
+	for (auto it : m_listButtonPlayAgain2)
 	{
 		it->Draw();
 	}

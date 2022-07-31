@@ -15,7 +15,7 @@ class GSPlay2 :
 {
 public:
 	std::string name1 = "enemysound.wav";
-	std::string name = "SoundGame2.wav";
+	std::string name = "SoundBackGroundGame3.wav";
 	GSPlay2();
 	~GSPlay2();
 	bool	die = false;

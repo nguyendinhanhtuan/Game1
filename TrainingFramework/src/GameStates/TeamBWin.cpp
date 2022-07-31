@@ -59,14 +59,6 @@ void TeamBWin::Init()
 	m_background->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
 
-	//animation die
-	shader = ResourceManagers::GetInstance()->GetShader("Animation");
-	texture = ResourceManagers::GetInstance()->GetTexture("animation3.tga");
-	std::shared_ptr<SpriteAnimation> count = std::make_shared<SpriteAnimation>(model, shader, texture, 4, 2 , 0, 0.1f);
-	count->Set2DPosition(Globals::screenWidth / 1.9f, Globals::screenHeight / 1.43f);
-	count->SetSize(500, 400);
-	m_listAnimation.push_back(count);
-
 	//animation fire
 	shader = ResourceManagers::GetInstance()->GetShader("Animation");
 	texture = ResourceManagers::GetInstance()->GetTexture("Fire.tga");
@@ -146,10 +138,6 @@ void TeamBWin::Update(float deltaTime)
 	{
 		it->Update(deltaTime);
 	}
-	for (auto it : m_listAnimation)
-	{
-		it->Update(deltaTime);
-	}
 	for (auto it : m_listButtonPlayAgain)
 	{
 		it->Update(deltaTime);
@@ -171,10 +159,6 @@ void TeamBWin::Update(float deltaTime)
 void TeamBWin::Draw()
 {
 	m_background->Draw();
-	for (auto& it : m_listAnimation)
-	{
-		it->Draw();
-	}
 	for (auto it : m_listButtonExit)
 	{
 		it->Draw();

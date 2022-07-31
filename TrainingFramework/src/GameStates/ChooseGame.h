@@ -27,6 +27,7 @@ private:
 	std::list<std::shared_ptr<GameButton>>	m_listButtonExit;
 	std::list<std::shared_ptr<GameButton>>	m_listButtonPlayAgain;
 	std::list<std::shared_ptr<GameButton>>	m_listButtonPlayAgain1;
+	std::list<std::shared_ptr<GameButton>>	m_listButtonPlayAgain2;
 	std::shared_ptr<Sprite2D>m_background;
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimationFire;

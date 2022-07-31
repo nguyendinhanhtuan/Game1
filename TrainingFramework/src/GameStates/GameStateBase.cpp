@@ -5,6 +5,7 @@
 #include "GSPlay.h"
 #include "GSPlay1.h"
 #include "GSPlay2.h"
+#include "GSPlay4.h"
 #include "GSIntro.h"
 #include "GSMenu.h"
 #include"GSPrepareToPlay.h"
@@ -14,10 +15,14 @@
 #include "GSHelp.h"
 #include "GSHelpGame2.h"
 #include "GSHelpGame3.h"
+#include "GSHelpGame4.h"
 #include "ChooseGame.h"
 #include "TeamAWin.h"
+#include "TeamAWin1.h"
+#include "TeamAWin2.h"
 #include "TeamBWin.h"
 #include "TeamAvTeamB.h"
+#include "TeamAvTeamB1.h"
 #include "DieGame3.h"
 #include "WinGame3.h"
 
@@ -65,11 +70,20 @@ std::shared_ptr<GameStateBase> GameStateBase::CreateState(StateType stt)
 	case StateType::STATE_HELPGAME3:
 		gs = std::make_shared<GSHelpGame3>();
 		break;
+	case StateType::STATE_HELPGAME4:
+		gs = std::make_shared<GSHelpGame4>();
+		break;
 	case StateType::STATE_CHOOSEGAME:
 		gs = std::make_shared<ChooseGame>();
 		break;
 	case StateType::STATE_TEAMAWIN:
 		gs = std::make_shared<TeamAWin>();
+		break;
+	case StateType::STATE_TEAMAWIN1:
+		gs = std::make_shared<TeamAWin1>();
+		break;
+	case StateType::STATE_TEAMAWIN2:
+		gs = std::make_shared<TeamAWin2>();
 		break;
 	case StateType::STATE_TEAMBWIN:
 		gs = std::make_shared<TeamBWin>();
@@ -77,11 +91,17 @@ std::shared_ptr<GameStateBase> GameStateBase::CreateState(StateType stt)
 	case StateType::STATE_TEAMAVTEAMB:
 		gs = std::make_shared<TeamAvTeamB>();
 		break;
+	case StateType::STATE_TEAMAVTEAMB1:
+		gs = std::make_shared<TeamAvTeamB1>();
+		break;
 	case StateType::STATE_DIEGAME3:
 		gs = std::make_shared<DieGame3>();
 		break;
 	case StateType::STATE_WINGAME3:
 		gs = std::make_shared<WinGame3>();
+		break;
+	case StateType::STATE_PLAY4:
+		gs = std::make_shared<GSPlay4>();
 		break;
 	default:
 		break;

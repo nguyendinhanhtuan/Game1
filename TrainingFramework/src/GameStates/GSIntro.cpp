@@ -60,7 +60,8 @@ void GSIntro::Update(float deltaTime)
 	{
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_MENU);
 		//GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY1);
-		//GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME3);
+		//GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HELPGAME4);
+		//GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY4);
 		m_time = 0;
 	}
 }

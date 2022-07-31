@@ -1,2 +1,9 @@
-﻿  ChooseGame.cpp
+﻿  Box1.cpp
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(15,29): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(15,22): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(16,34): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(16,28): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(45,29): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(598,34): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
+D:\GameLoft\MiniGameStarter\TrainingFramework\src\GameObject\Box1.cpp(598,28): warning C4244: 'argument': conversion from 'GLfloat' to 'GLint', possible loss of data
   TrainingFramework.vcxproj -> D:\GameLoft\MiniGameStarter\BIN-Nvidia\TrainingFramework.exe

@@ -38,7 +38,6 @@ public:
 	void	Resume() override;
 	void	HandleEvents() override;
 	void	HandleKeyEvents(int key, bool bIsPressed) override;
-	void	HandleKeyEvents1(int key, bool bIsPressed) ;
 	void	HandleTouchEvents(int x, int y, bool bIsPressed) override;
 	void	HandleMouseMoveEvents(int x, int y) override;
 	void	Update(float deltaTime) override;

@@ -61,6 +61,7 @@ void Slime::Move(int dir) {
 			dir = 0;
 			GameStateMachine::GetInstance()->ChangeState(StateType::STATE_WIN);
 			ResourceManagers::GetInstance()->StopSound(name2);
+			ResourceManagers::GetInstance()->StopSound(name3);
 		}
 		if (isFaceRight) {
 			isFaceRight = false;
